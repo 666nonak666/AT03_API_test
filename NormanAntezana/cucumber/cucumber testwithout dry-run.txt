@@ -1,0 +1,32 @@
+   Microsoft Windows [Version 6.3.9600]
+   (c) 2013 Microsoft Corporation. All rights reserved.
+
+   C:\Users\Administrator>cd C:\Users\Administrator\Desktop\Api Test\project\AT03_A
+   PI_test\NormanAntezana\cucumber
+
+   C:\Users\Administrator\Desktop\Api Test\project\AT03_API_test\NormanAntezana\cuc
+   umber>cd test
+
+   C:\Users\Administrator\Desktop\Api Test\project\AT03_API_test\NormanAntezana\cuc
+   umber\test>cucumber
+   *** WARNING: You must use ANSICON 1.31 or higher (https://github.com/adoxa/ansic
+   on/) to get coloured output on Windows
+   Feature: Buy item
+     lets buy the microwave the cos is 50 and give me the the change.
+
+     Scenario: I buy a item                   # features/buy.feature:4
+       Given I has buy a microwave I have 100 # features/step_definitions/my_steps.
+   rb:4
+       When I pay the microwave               # features/step_definitions/my_steps.
+   rb:11
+         buy microwave
+       Then I should be recive message        # features/step_definitions/my_steps.
+   rb:15
+         thanks for buy
+
+   1 scenario (1 passed)
+   3 steps (3 passed)
+   0m0.043s
+
+
+

@@ -1,0 +1,19 @@
+C:\Users\Administrator\Desktop\Api Test\project\AT03_API_test\NormanAntezana\cuc
+   umber\test>cucumber --dry-run
+   *** WARNING: You must use ANSICON 1.31 or higher (https://github.com/adoxa/ansic
+   on/) to get coloured output on Windows
+   Feature: Buy item
+     lets buy the microwave the cos is 50 and give me the the change.
+
+     Scenario: I buy a item                   # features/buy.feature:4
+       Given I has buy a microwave I have 100 # features/step_definitions/my_steps.
+   rb:4
+       When I pay the microwave               # features/step_definitions/my_steps.
+   rb:11
+       Then I should be recive message        # features/step_definitions/my_steps.
+   rb:15
+
+   1 scenario (1 skipped)
+   3 steps (3 skipped)
+
+

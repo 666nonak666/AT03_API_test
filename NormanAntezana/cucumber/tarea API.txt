@@ -1,0 +1,152 @@
+Research :
+-When and why BDD was defined
+behavior-driven development (BDD) is a software development process
+ that emerged from test-driven development (TDD). Behavior-driven development
+ combines the general techniques and principles of TDD with ideas 
+from domain-driven design and object-oriented analysis and design 
+to provide software development and management teams with shared 
+tools and a shared process to collaborate on software development.
+
+why
+    the business being truly able to define the desired outcomes
+    the developer’s understanding of what needs to be built, and
+    the business’ understanding of the technical challenges their requirements may present.
+
+
+-The most important aspects of BDD
+    *BDD offers more precise guidance on organizing the conversation between developers, testers and domain experts
+    *notations originating in the BDD approach, in particular the given-when-then canvas, are closer to everyday language 
+      and have a shallower learning curve compared to those of tools such as Fit/FitNesse
+    *tools targeting a BDD approach generally afford the automatic generation of technical and end user documentation from BDD "specifications"
+
+-Why is useful and when could be applied.
+  BDD is to provide a single answer to what many Agile teams view as separate activities: 
+  the creation of unit tests and "technical" code on one hand, the creation of functional tests
+  and "features" on the other hand. This should lead to increased collaboration between
+  developers, test specialists, and domain experts.
+
+-Which type of teams could implement BDD
+ BDD is to provide a single answer to what many Agile teams view as separate activities
+
+-Structure of a feature – Give an example
+
+file is supposed to describe a single feature of the system, or a particular aspect of a feature. 
+It's just a way to provide a high-level description of a software feature, and to group related scenarios.
+A feature has three basic elements---the Feature: keyword, a name (on the same line) 
+and an optional (but highly recommended) description that can span multiple lines.
+
+*Feature: Refund item
+
+   Sales assistants should be able to refund customers' purchases.
+   This is required by the law, and is also essential in order to
+   keep customers happy.
+
+   Rules:
+   - Customer must present proof of purchase
+   - Purchase must be less than 30 days ago
+
+-Structure of a user story – Give an example
+
+Basic Structure
+
+As A (role)
+
+I Want To (do something)
+
+So That (benefit)
+
+and/or
+
+In order to (business value)
+
+As a (user)
+
+I want to (gain outcome)
+
+Acceptance Criteria :
+
+Given (the starting point/initial state)
+
+When (action)
+
+Then (outcome)
+
+*Basic User Story Example
+
+Lets say we want to search for a book that is listed in the store.
+
+As A teacher
+
+I Want To search for a book using the title
+
+So That I can check the price and availability
+
+ 
+
+Given that I am on the home screen (known state)
+
+When I enter a book title into the search field for a book which is in stock
+
+And press search (action)
+
+Then I should see a list of all matched books by title
+
+And this list should be presented in alphabetical order in Ascending order
+
+And next to each result I should see the price and stock level (outcome)
+
+ 
+
+Given that I am on the home screen
+
+When I enter a book title into the search field for a book which is isn’t in stock
+
+And press search
+
+Then I should see a message indicating the book is not in stock
+
+
+
+-Structure of a scenario – Give an example
+
+A scenario is a concrete example that illustrates a business rule. It consists of a list of steps.
+Scenarios follow the same pattern:
+
+    Describe an initial context  (Given)
+    Describe an event  (When)
+    Describe an expected outcome  (Then )
+
+This is done with steps.
+
+Scenario: feeding a small suckler cow
+  Given the cow weighs 450 kg
+  When we calculate the feeding requirements
+  Then the energy should be 26500 MJ
+  And the protein should be 215 kg
+
+When you have a complex business rule with severable variable inputs or outputs
+ you might end up creating several scenarios that only differ by their values.
+We can simplify it with a Scenario Outline:
+
+Scenario Outline: feeding a suckler cow
+  Given the cow weighs <weight> kg
+  When we calculate the feeding requirements
+  Then the energy should be <energy> MJ
+  And the protein should be <protein> kg
+
+  Examples:
+    | weight | energy | protein |
+    |    450 |  26500 |     215 |
+    |    500 |  29500 |     245 |
+    |    575 |  31500 |     255 |
+    |    600 |  37000 |     305 |
+
+
+-Differences between BDD and BDT
+
+the QA team does Test Automation along with other testing
+responsabilities.
+
+the QA team focused on defining acceptance criteria, 
+doing manual /ad-hoc/exploratory testing , etc. and the 
+development team Itself will do Functional Test Automation.
