@@ -1,0 +1,12 @@
+answear the practice 2 cucumbersesion part2
+
+I stay in the main page
+
+
+You can implement step definitions for undefined steps with these snippets:
+
+When(/^I and send the search character special and before the word$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Skipped step
