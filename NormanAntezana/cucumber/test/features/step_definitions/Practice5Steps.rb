@@ -15,7 +15,7 @@ Given(/^The Year select is (\d*)$/) do |value|
   puts value
 end
 
-Given(/^The month is (0[1-9]|1[1-2])/) do |value|
+Given(/^The month is (0[1-9]|1[1-2])$/) do |value|
   puts value
 end
 
